@@ -1,7 +1,9 @@
+bashCopy code
 FROM node:18
-WoRKDIR /app
+WORKDIR /app
 COPY package*.json ./
 RUN npm install
+EXPOSE 5000
 COPY . .
-CMD [ "node" , "index"]
+CMD [ "node" , "index.js"]
 
